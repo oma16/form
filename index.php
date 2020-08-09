@@ -24,43 +24,65 @@ if(isset($_POST['btn'])){
 
 ?>"  >
 <h2>Please enter your Details</h2>
+<div>
 <form action="processform.php" method="post">
 <div>
 <label for="firstname">First Name:</label>
-<input type="text" name="firstname" id="">
-<span class="error">* <?php echo $firstnameErr;?></span>
+<input type="text" name="firstname" id=""> <br>
+<?php if(isset($firstnameErr)){?>
+<p class="error"> <?php echo $firstnameErr;?></p>
+<?php }?>
 </div>
 
 <div>
 <label for="secondname">Second Name:</label>
-<input type="text" name="secondname" id="">
-<span class="error">* <?php echo $secondnameErr;?></span>
-
+<input type="text" name="secondname" id=""> <br>
+<?php if(isset($secondnameErr)){?>
+<p class="error"> <?php echo $secondnameErr;?></p>
+<?php }?>
 </div>
 
 <div>
 <label for="email">Email:</label>
-<input type="text" name="email" id="">
-<span class="error">* <?php echo $emailErr;?></span>
+<input type="text" name="email" id=""> <br>
+
+<?php if(isset($emailErr)){?>
+
+<p class="error"> <?php echo $emailErr;?></p>
+
+<?php }?>
 </div>
 
 <div>
 <label for="date_of_birth">Date Of Birth:</label>
-<input type="date" name="date_of_birth" id="">
-<span class="error">* <?php echo $date_of_birthErr;?></span>
+<input type="date" name="date_of_birth" id=""> <br>
+<?php if(isset($date_of_birthErr)){?>
+
+<p class="error"><?php echo $date_of_birthErr;?></p>
+<?php }?>
+
 </div>
 
 <div>
 <label for="favorite_color">Favorite Color:</label>
-<input type="color" name="favorite_color" id="">
-<span class="error">* <?php echo $favorite_colorErr;?></span>
+<input type="color" name="favorite_color" id=""><br>
+<?php if(isset($favorite_colorErr)){?>
+
+<p class="error"><?php echo $favorite_colorErr;?></p>
+<?php }?>
+
 </div>
 <div>
 <label for="gender">Gender:</label>
 <input type="radio" name="gender" id="">Male
 <input type="radio" name="gender" id="">Female
-<input type="radio" name="gender" id="">Other
-<span class="error">* <?php echo $genderErr;?></span>
+<input type="radio" name="gender" id="">Other <br>
+<?php if(isset($genderErr)){?>
+
+
+<p class="error"> <?php echo $genderErr;?></p>
+<?php }?>
+
 </div>
 
 <div>
@@ -72,14 +94,24 @@ if(isset($_POST['btn'])){
 <option value="Marketing">Marketing</option>
 <option value="Administrative">Administrative</option>
 
-</select>
-<span class="error">* <?php echo $departmentErr;?></span>
+</select> <br>
+<?php if(isset($departmentErr)){?>
+
+<p class="error"> <?php echo $departmentErr;?></p>
+<?php }?>
+
 </div>
 
+
+
 <div>
-<label for="password">Password</label>
-<input type="password" name="password" id="">
-<span class="error">* <?php echo $passwordErr;?></span>
+<label for="password">Password:</label>
+<input type="password" name="password" id=""> <br>
+<?php if(isset($passwordErr)){?>
+
+<p class="error"> <?php echo $passwordErr;?></p>
+<?php }?>
+
 </div>
 
 
@@ -90,6 +122,7 @@ if(isset($_POST['btn'])){
 </div>
 
 </form> 
+</div>
 </body>
 </html>
 
