@@ -97,8 +97,18 @@ if (empty($_POST["gender"])) {
     $genderErr = "Gender is required";
 } else {
   $gender = test_input($_POST["gender"]);
-}
-echo "Gender : " . $gender . "<br>";
+  if(!empty($_POST["gender"] == '2')){
+    header("location:index.php");
+    $genderErr = "Select at most one option";
+      
+    }else{
+        $_POST["gender"] == 1;
+        $gender = "Checked";
+
+    }
+    echo "Gender : " . $gender . "<br>";
+  }
+
 
 if (isset($_POST["department"]) && $_POST["department"] == '0') {
     header("location:index.php");

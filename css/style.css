@@ -8,5 +8,9 @@ div{
 h2{
     color: red;
     text-align: center;
+    font-size: 25px;
 
+}
+label{
+    font-size: 18px;
 }

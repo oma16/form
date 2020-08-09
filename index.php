@@ -74,12 +74,9 @@ if(isset($_POST['btn'])){
 </div>
 <div>
 <label for="gender">Gender:</label>
-<input type="radio" name="gender" id="">Male
-<input type="radio" name="gender" id="">Female
-<input type="radio" name="gender" id="">Other <br>
+<input type="checkbox" name="gender" id="">Male
+<input type="checkbox" name="gender" id="">Female
 <?php if(isset($genderErr)){?>
-
-
 <p class="error"> <?php echo $genderErr;?></p>
 <?php }?>
 
